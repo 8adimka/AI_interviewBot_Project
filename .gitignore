@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+
+# Virtual environment
+venv/
+
+# Environment
+.env
+
+# OS
+.DS_Store
+
+# Testing
+op_ai_testing.py

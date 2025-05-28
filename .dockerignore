@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+venv/
+*.db
+*.sqlite3
+op_ai_testing.py

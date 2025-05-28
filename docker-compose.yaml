@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:  # Контейнер с PostgreSQL
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"  # Прокидываем порт PostgreSQL
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: v
+      POSTGRES_PASSWORD: 1111
+      POSTGRES_DB: interview_db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U v -d interview_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  bot:  # Контейнер с ботом
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./bot/docker_config.py:/app/bot/config.py  # Привязка конфигурации
+    env_file:
+      - .env  # Загружаем переменные окружения
+
+volumes:
+  postgres_data:
