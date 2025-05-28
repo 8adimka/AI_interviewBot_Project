@@ -165,4 +165,4 @@ Docker будет хранить данные PostgreSQL в /var/lib/docker/volu
 
 📬 Vadim Medintsev
 📧 Email: m8adimka@gmail.com
-🌍 LinkedIn linkedin.com/in/vadim-medintsev/
+🌍 LinkedIn [linkedin.com/in/vadim-medintsev/](https://www.linkedin.com/in/vadim-medintsev/)
