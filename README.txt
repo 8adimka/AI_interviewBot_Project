@@ -210,7 +210,7 @@ docker ps
 4. Выполнение миграций
 После первого запуска выполните миграции базы данных:
 docker-compose exec bot python manage.py migrate
-При необходимости создайте суперпользователя Django:
+При необходимости создайте суперпользователя Django (не обязательно):
 docker-compose exec bot python manage.py createsuperuser
 
 5. Логирование контейнера
